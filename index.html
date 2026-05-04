@@ -1606,5 +1606,183 @@
   window.addEventListener('load', startChat);
 </script>
 
+<!-- ══════════════════════════════════════════
+     SECCIÓN DE INVERSIÓN
+══════════════════════════════════════════ -->
+<style>
+  .pricing-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 32px 80px;
+  }
+  .pricing-section .section-title { margin-bottom: 8px; }
+  .pricing-section .section-sub { margin-bottom: 48px; }
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .pricing-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    transition: box-shadow .2s;
+  }
+  .pricing-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,.18); }
+  .pricing-card.featured {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+  .pricing-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .pricing-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .pricing-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--t);
+    line-height: 1.3;
+  }
+  .pricing-price {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--t);
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+  .pricing-price span {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--td);
+    letter-spacing: 0;
+  }
+  .pricing-desc {
+    font-size: 13px;
+    color: var(--td);
+    line-height: 1.6;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    margin-top: 4px;
+  }
+  .pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .pricing-features li {
+    font-size: 13px;
+    color: var(--t);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+  }
+  .pricing-features li::before {
+    content: '✓';
+    color: var(--accent);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .pricing-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--td);
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+  @media (max-width: 600px) {
+    .pricing-section { padding: 40px 16px 60px; }
+    .pricing-price { font-size: 30px; }
+  }
+</style>
+
+<div class="pricing-section">
+  <div class="section-title">Inversión y <span>Planes</span></div>
+  <div class="section-sub">Todo lo que necesita para digitalizar su operación — sin costos ocultos</div>
+
+  <div class="pricing-cards">
+
+    <!-- PLAN ANUAL -->
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Recomendado</div>
+      <div class="pricing-label">Empleado Digital · WhatsApp</div>
+      <div class="pricing-name">Contrato Anual</div>
+      <div class="pricing-price">$789 <span>USD / año</span></div>
+      <p class="pricing-desc">Atención al cliente 24/7 por WhatsApp con inteligencia artificial. Toma pedidos, resuelve preguntas y gestiona el flujo completo de venta.</p>
+      <ul class="pricing-features">
+        <li>Empleado Digital activo 24/7</li>
+        <li>Toma y confirma pedidos automáticamente</li>
+        <li>Integración con sistema interno</li>
+        <li>Actualizaciones y soporte incluidos</li>
+        <li>Ahorro de $322 frente al plan semestral</li>
+      </ul>
+    </div>
+
+    <!-- PLAN SEMESTRAL -->
+    <div class="pricing-card">
+      <div class="pricing-label">Empleado Digital · WhatsApp</div>
+      <div class="pricing-name">Contrato Semestral</div>
+      <div class="pricing-price">$1,100 <span>USD / 6 meses</span></div>
+      <p class="pricing-desc">La misma solución completa de atención al cliente con compromiso de 6 meses. Ideal para evaluar el impacto antes de un contrato anual.</p>
+      <ul class="pricing-features">
+        <li>Empleado Digital activo 24/7</li>
+        <li>Toma y confirma pedidos automáticamente</li>
+        <li>Integración con sistema interno</li>
+        <li>Actualizaciones y soporte incluidos</li>
+      </ul>
+    </div>
+
+    <!-- CONSULTORÍA -->
+    <div class="pricing-card">
+      <div class="pricing-label">Consultoría · Transformación Digital</div>
+      <div class="pricing-name">Construcción del Sistema</div>
+      <div class="pricing-price">$2,500 <span>USD · pago único</span></div>
+      <p class="pricing-desc">Trabajo conjunto de 2 meses donde NODO se integra con su equipo para diseñar e implementar la estrategia digital completa de su negocio.</p>
+      <ul class="pricing-features">
+        <li>Análisis profundo de todos sus procesos</li>
+        <li>Identificación de oportunidades de mejora</li>
+        <li>Roadmap de digitalización personalizado</li>
+        <li>Evaluación de IA aplicable a cada área</li>
+        <li>Trabajo presencial con su equipo</li>
+        <li>Duración: 2 meses · Pago único</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p class="pricing-note">
+    Los precios están expresados en dólares estadounidenses (USD).<br>
+    Para iniciar, contáctenos directamente y le preparamos una propuesta formal.
+  </p>
+</div>
+
 </body>
 </html>
